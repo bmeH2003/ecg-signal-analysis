@@ -216,9 +216,15 @@ plt.tight_layout()
 plt.savefig("results/step5.png", dpi=300, bbox_inches="tight")
 plt.close()
 
+# Select beat annotations only
+beat_symbols = np.array(annotation.symbol)
 
-# Convert reference annotations to NumPy array
-reference_peaks = np.array(annotation_samples)
+beat_mask = np.isin(
+    beat_symbols,
+    ["N", "A", "V"]
+)
+
+reference_peaks = annotation_samples[beat_mask]
 
 # Allowed difference: 100 milliseconds
 tolerance = int(0.1 * fs)
