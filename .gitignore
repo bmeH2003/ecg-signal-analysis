@@ -1,0 +1,22 @@
+# MIT-BIH database files
+*.dat
+*.atr
+*.hea
+*.xws
+*.at_
+*.at-
+*.npz
+
+# MIT-BIH database folders/files
+mitdbdir/
+x_mitdb/
+RECORDS
+ANNOTATORS
+SHA256SUMS.txt
+
+# VS Code
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
